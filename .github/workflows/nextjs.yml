@@ -47,12 +47,11 @@ jobs:
                   else
                     echo "Unable to determine package manager"
                     exit 1
-                  fi
             - name: Setup Node.js
               uses: actions/setup-node@v4
               with:
-                node-version: "20"
-                cache: "pnpm"
+                  node-version: "22"
+                  cache: "pnpm"
             - name: Setup Pages
               uses: actions/configure-pages@v5
               with:
