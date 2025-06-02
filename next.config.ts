@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig = {
   output: 'export',
-  basePath: process.env.NODE_ENV === 'development' ? '' : '/название-репозитория',
+  basePath: '/khaetbek-portfolio',
   images: {
     unoptimized: true,
   },
