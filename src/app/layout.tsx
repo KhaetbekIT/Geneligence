@@ -1,4 +1,5 @@
 import { globalUrls } from "@/const/global-urls";
+import { Header } from "@/layout/header";
 import "@/styles/global.css";
 import type { LayoutType } from "@/types/types";
 import type { Metadata } from "next";
@@ -65,8 +66,8 @@ const RootLayout: LayoutType = async ({ children }) => {
 			<Head>
 				<meta name="apple-mobile-web-app-title" content="Khaetbek" />
 			</Head>
-			<body className="flex flex-col justify-between min-h-screen">
-				<header className="flex-shrink-0">header</header>
+			<body className="flex flex-col justify-between min-h-screen bg-white">
+				<Header className="flex-shrink-0" />
 
 				<main className="flex-1">{children}</main>
 

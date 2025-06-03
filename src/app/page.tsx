@@ -1,10 +1,11 @@
 import type { PageType } from "@/types/types";
+import { Header } from "./_components/header";
 
 const Page: PageType = () => {
 	return (
-		<div>
-			<h1>Home</h1>
-		</div>
+		<>
+			<Header />
+		</>
 	);
 };
 
