@@ -1,27 +1,49 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.3.3"
-  },
-  "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
-    "eslint": "^9",
-    "eslint-config-next": "15.3.3",
-    "@eslint/eslintrc": "^3"
-  }
+    "name": "khaetbek-portfolio",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev --turbopack",
+        "build": "next build",
+        "start": "next start",
+        "clean": "rm -rf .next dist node_modules",
+        "lint": "npm biome lint ./src",
+        "lint:fix": "npm biome lint --write ./src",
+        "fmt": "npm biome format ./src",
+        "fmt:fix": "npm biome format --write ./src",
+        "typecheck": "tsc --noEmit",
+        "sortcn": "npm prettier ./src --write",
+        "i18n:check": "npm i18n-check -s ru --locales messages -f i18next",
+        "prepare": "husky"
+    },
+    "lint-staged": {
+        "*.{ts,jsx,tsx}": [
+            "biome check --write --no-errors-on-unmatched"
+        ],
+        "messages/*.json": [
+            "i18n-check -s ru --locales messages -f i18next"
+        ]
+    },
+    "dependencies": {
+        "clsx": "^2.1.1",
+        "lucide-react": "^0.511.0",
+        "next": "15.3.3",
+        "next-intl": "^4.1.0",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0",
+        "tailwind-merge": "^3.3.0"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "1.9.4",
+        "@eslint/eslintrc": "^3",
+        "@tailwindcss/postcss": "^4",
+        "@types/node": "^20",
+        "@types/react": "^19",
+        "@types/react-dom": "^19",
+        "eslint": "^9",
+        "eslint-config-next": "15.3.3",
+        "husky": "^9.1.7",
+        "tailwindcss": "^4",
+        "typescript": "^5"
+    }
 }

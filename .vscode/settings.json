@@ -1,0 +1,64 @@
+{
+	"editor.defaultFormatter": "biomejs.biome",
+
+	"[html]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[md]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[css]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"tailwindCSS.experimental.classRegex": [
+		["cva\\(((?:[^()]|\\([^()]*\\))*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+		["cx\\(((?:[^()]|\\([^()]*\\))*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+	],
+
+	"editor.codeActionsOnSave": {
+		"source.organizeImports": "explicit"
+	},
+	"editor.formatOnSave": true,
+
+	"workbench.editor.customLabels.patterns": {
+		"**/app/**/*slug*/page.tsx": "${dirname(1)} [${dirname}] (page)",
+		"**/app/**/*slug*/page.jsx": "${dirname(1)} [${dirname}] (page)",
+		"**/app/**/*id*/page.tsx": "${dirname(1)} [${dirname}] (page)",
+		"**/app/**/*id*/page.jsx": "${dirname(1)} [${dirname}] (page)",
+		"**/app/**/page.tsx": "${dirname} (page)",
+		"**/app/**/page.jsx": "${dirname} (page)",
+		"**/pages/**/index.tsx": "${dirname} (page)",
+		"**/pages/**/index.jsx": "${dirname} (page)",
+		"**/components/**/index.tsx": "${dirname} (component)",
+		"**/components/**/index.jsx": "${dirname} (component)",
+		"**/index.tsx": "${dirname} (index)",
+		"**/index.jsx": "${dirname} (index)",
+		"**/index.ts": "${dirname} (index)",
+		"**/index.js": "${dirname} (index)",
+		"**/type.ts": "${dirname} (type)",
+		"**/type.js": "${dirname} (type)",
+		"**/api.ts": "${dirname} (api)",
+		"**/api.js": "${dirname} (api)",
+		"**/style.css": "${dirname} (style)",
+		"**/style.scss": "${dirname} (style)"
+	},
+	"typescript.tsdk": "node_modules\\typescript\\lib",
+	"typescript.preferences.autoImportFileExcludePatterns": [ "@radix-ui/*" ],
+	"cSpell.language": "en,ru,uz",
+	"i18n-ally.localesPaths": [ "messages", "src/i18n" ],
+	"i18n-ally.extract.autoDetect": true,
+	"i18n-ally.sourceLanguage": "ru",
+	"i18n-ally.keystyle": "nested",
+	"[json]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	}
+}

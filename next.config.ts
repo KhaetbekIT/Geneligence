@@ -1,7 +1,32 @@
 import type { NextConfig } from "next";
+import createNextIntlPlugin from "next-intl/plugin";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+	reactStrictMode: true,
+	eslint: {
+		ignoreDuringBuilds: true,
+	},
+	logging: {
+		fetches: {
+			fullUrl: true,
+		},
+	},
+	output: "standalone",
+	transpilePackages: ["@t3-oss/env-nextjs", "@t3-oss/env-core"],
+	headers: async () => {
+		return [
+			{
+				source: "/(.*)",
+				headers: [
+					{
+						key: "X-Developed-By",
+						value: "khaetbek.dev",
+					},
+				],
+			},
+		];
+	},
 };
 
-export default nextConfig;
+const withNextIntl = createNextIntlPlugin();
+export default withNextIntl(nextConfig);
