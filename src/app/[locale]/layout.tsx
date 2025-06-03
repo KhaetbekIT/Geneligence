@@ -7,9 +7,9 @@ import { setRequestLocale } from "next-intl/server";
 import { Heebo } from "next/font/google";
 import { notFound } from "next/navigation";
 
-export function generateStaticParams() {
-	return routing.locales.map((locale) => ({ locale }));
-}
+// export function generateStaticParams() {
+// 	return routing.locales.map((locale) => ({ locale }));
+// }
 
 export const metadata: Metadata = {
 	title: "Khaetbek Portfolio",
