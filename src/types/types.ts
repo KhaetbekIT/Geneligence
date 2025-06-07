@@ -3,11 +3,13 @@ import type { FC, ReactNode } from "react";
 
 type SearchParams = { [key: string]: string | string[] | undefined };
 export interface ParamsWithLocale {
+	id: string;
 	[key: string]: string;
 }
 
-export type PageType = FC<{
+export type PageType<Params extends ParamsWithLocale = ParamsWithLocale> = FC<{
 	searchParams: Promise<SearchParams>;
+	params: Promise<Params>;
 }>;
 
 export type LayoutType = FC<{

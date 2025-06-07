@@ -1,5 +1,7 @@
 import { globalUrls } from "@/const/global-urls";
+import { Footer } from "@/layout/footer";
 import { Header } from "@/layout/header";
+import { cn } from "@/lib/utils";
 import "@/styles/global.css";
 import type { LayoutType } from "@/types/types";
 import type { Metadata } from "next";
@@ -62,16 +64,20 @@ const heebo = Heebo({
 
 const RootLayout: LayoutType = async ({ children }) => {
 	return (
-		<html className={heebo.className} lang="en" translate="no">
+		<html
+			className={cn(heebo.className, "scroll-smooth")}
+			lang="en"
+			translate="no"
+		>
 			<Head>
 				<meta name="apple-mobile-web-app-title" content="Khaetbek" />
 			</Head>
 			<body className="flex flex-col justify-between min-h-screen bg-white">
-				<Header className="flex-shrink-0" />
+				<Header className="shrink-0" />
 
 				<main className="flex-1">{children}</main>
 
-				<footer className="flex-shrink-0">footer</footer>
+				<Footer className="shrink-0" />
 			</body>
 		</html>
 	);

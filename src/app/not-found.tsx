@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function NotFound() {
 	return (
-		<html lang="ru">
+		<html lang="en">
 			<head>
 				<title>404 - Page Not Found</title>
 			</head>

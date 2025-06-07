@@ -6,9 +6,9 @@ import Link from "next/link";
 
 export const Header = () => {
 	return (
-		<section className="pt-[134px]">
+		<section className="pt-[134px] pb-[86px]">
 			<Container>
-				<div className="flex items-center justify-center gap-10">
+				<div className="flex items-center justify-between gap-10">
 					<div className="w-[506px] space-y-10 flex-shrink-0">
 						<h1 className="text-[44px] font-bold">
 							Hi, I am Khaetbek, a Frontend Developer
@@ -34,6 +34,8 @@ export const Header = () => {
 
 					<div className="w-60 h-60 rounded-full bg-[#EDF7FA] overflow-hidden">
 						<Image
+							width={300}
+							height={300}
 							priority
 							src={Avatar}
 							alt="avatar"
