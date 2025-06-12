@@ -2,17 +2,17 @@
     "version": 2,
     "builds": [
       {
-        "src": "/backend/index.js",
+        "src": "index.js",
         "use": "@vercel/node",
         "config": {
-          "includeFiles": ["/backenddb.json"]
+          "includeFiles": ["db.json"]
         }
       }
     ],
     "routes": [
       {
-        "src": "/backend/(.*)",
-        "dest": "/backend/index.js"
+        "src": "/(.*)",
+        "dest": "index.js"
       }
     ]
   }
