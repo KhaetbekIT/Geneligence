@@ -1,0 +1,26 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "title",
+      "created_at": "2022-10-10",
+      "body": "body",
+      "user": {
+        "job_name": "job_name",
+        "name": "name"
+      },
+      "short_text": "short_text"
+    },
+    {
+      "title": "title",
+      "created_at": "2022-10-10",
+      "body": "body",
+      "user": {
+        "job_name": "job_name",
+        "name": "name"
+      },
+      "short_text": "short_text",
+      "id": 2
+    }
+  ]
+}

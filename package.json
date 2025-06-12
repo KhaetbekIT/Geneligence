@@ -4,8 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "json-server --watch db.json --port 8000",
-        "node": "node index.js"
+        "start": "node backend/index.js"
     },
     "keywords": [],
     "author": "",
