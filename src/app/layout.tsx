@@ -8,6 +8,13 @@ import type { Metadata } from "next";
 import { Heebo } from "next/font/google";
 import Head from "next/head";
 
+export async function getStaticPaths() {
+	return {
+		paths: [{ params: { id: 1 } }],
+		fallback: false,
+	};
+}
+
 export const metadata: Metadata = {
 	title: "Khaetbek Portfolio",
 	description:
