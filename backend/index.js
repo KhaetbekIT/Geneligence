@@ -33,3 +33,5 @@ server.use(router);
 server.listen(8000, () => {
     console.log("✅ JSON Server running on http://localhost:8000");
 });
+
+module.exports = server;
