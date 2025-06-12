@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
 			fullUrl: true,
 		},
 	},
-	output: "export",
+	output: "standalone",
 	transpilePackages: ["@t3-oss/env-nextjs", "@t3-oss/env-core"],
 };
 
