@@ -20,9 +20,17 @@ server.use((req, res, next) => {
 
     if (isProtectedRoute && ["PATCH", "DELETE", "POST"].includes(req.method)) {
         const accessKey = req.headers["x-access-key"];
-        if (accessKey !== "SECRET123") {
+        if (accessKey !== process.env.ACCESS_KEY) {
             return res.status(401).json({ error: "Unauthorized" });
         }
+    }
+
+    if (req.method === "POST") {
+        req.body.created_at = Date.now();
+    }
+
+    if (req.method === "PATCH") {
+        req.body.updated_at = Date.now();
     }
 
     next();
