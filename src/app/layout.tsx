@@ -45,7 +45,7 @@ export const metadata: Metadata = {
 const RootLayout: LayoutType = ({ children }) => {
 	return (
 		<html className={cn(bebas.className)} lang="en" translate="no">
-			<body className="flex flex-col min-h-screen justify-between bg-black text-white">
+			<body className="flex flex-col min-h-screen justify-between bg-black ">
 				<Nav className="z-10 shrink-0" />
 				<main className="grow">{children}</main>
 			</body>
