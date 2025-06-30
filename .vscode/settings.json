@@ -3,10 +3,10 @@
 		"editor.defaultFormatter": "vscode.json-language-features"
 	},
 	"[typescript]": {
-		"editor.defaultFormatter": "biomejs.biome"
+		"editor.defaultFormatter": "vscode.typescript-language-features"
 	},
 	"[typescriptreact]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
+		"editor.defaultFormatter": "vscode.typescript-language-features"
 	},
 	"cSpell.language": "en,ru,uz",
 	"editor.codeActionsOnSave": {

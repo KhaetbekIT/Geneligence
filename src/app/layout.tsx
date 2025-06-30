@@ -1,54 +1,22 @@
 import type { LayoutType } from "@/types/type";
-import "@/css/globals.css";
-import type { Metadata } from "next";
-import { Bebas_Neue } from "next/font/google";
-import { Nav } from "@/layout/nav";
+import "@/styles/globals.css";
+import { Manrope } from "next/font/google";
 import { cn } from "@/lib/utils";
 
-const bebas = Bebas_Neue({ subsets: ["latin"], weight: ["400"] });
+const manrope = Manrope({
+	subsets: ["latin"],
+	variable: "--font-manrope",
+	weight: ["400", "500", "600", "700", "800"],
+});
 
-export const metadata: Metadata = {
-	title: "Akhmadzhonov Khaetbek — Frontend Developer Portfolio",
-	description:
-		"Портфолио Ахмаджонова Хаётбека — Frontend-разработчика с опытом в React, Next.js, TypeScript. Работаю в компании Мегабит-ЦРМ, преподавал в IT-академии, владею современными технологиями фронтенда.",
-	keywords: [
-		"Khaetbek Akhmadzhonov",
-		"Frontend developer",
-		"React.js",
-		"Next.js",
-		"TypeScript",
-		"JavaScript",
-		"Программист Ташкент",
-		"Портфолио Frontend",
-		"Мегабит-ЦРМ",
-		"IT-academy",
-		"Frontend разработка",
-		"HTML CSS",
-		"Git GitHub",
-		"Разработчик сайтов Узбекистан",
-		"Разработчик сайтов",
-		"Разработчик веб-сайтов",
-		"Разработчик веб-сайтов Узбекистан",
-		"Meiji Media",
-	],
-	authors: [{ name: "Akhmadzhonov Khaetbek", url: "https://khaetbek.dev" }],
-	creator: "Akhmadzhonov Khaetbek",
-	openGraph: {
-		title: "Akhmadzhonov Khaetbek — Frontend Developer Portfolio",
-		description:
-			"Портфолио и профессиональные достижения Ахмаджонова Хаётбека — frontend-разработчика из Узбекистана. Технологии: React, Next.js, TypeScript, Git.",
-		url: "https://khaetbek.dev",
-		type: "website",
-	},
-};
-
-const RootLayout: LayoutType = ({ children }) => {
+const RootLayout: LayoutType = async ({ children }) => {
 	return (
-		<html className={cn(bebas.className)} lang="en" translate="no">
-			<body className="flex flex-col min-h-screen justify-between bg-black ">
-				<Nav className="z-10 shrink-0" />
-				<main className="grow">{children}</main>
-			</body>
+		<html
+			className={cn("scroll-smooth", manrope.className)}
+			lang="ru"
+			translate="no"
+		>
+			{children}
 		</html>
 	);
 };

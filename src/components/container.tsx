@@ -1,20 +1,11 @@
-import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
+import type { ComponentProps } from "react";
 
-export const Container = ({ children, className }: Props) => {
+export const Container = ({ className, ...props }: ComponentProps<"div">) => {
 	return (
 		<div
-			className={cn(
-				"max-w-[calc(1600px+(65px*2))] px-[65px] w-full mx-auto",
-				className,
-			)}
-		>
-			{children}
-		</div>
+			className={cn("max-w-[1236px] w-full px-4 mx-auto", className)}
+			{...props}
+		/>
 	);
 };
-
-interface Props {
-	children: ReactNode;
-	className?: string;
-}
