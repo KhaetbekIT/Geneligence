@@ -12,5 +12,9 @@ export const Routers = {
 		elite: "https://elite-dd.com/",
 		dikom: "https://dikom.ru/",
 		doirastan: "https://doirastan.uz/",
+		onlineShopping: "https://tech-store.sarob.uz/ru",
+	},
+	socials: {
+		telegram: "https://t.me/bek_worker",
 	},
 } as const;

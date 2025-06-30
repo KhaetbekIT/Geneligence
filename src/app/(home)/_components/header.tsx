@@ -1,9 +1,9 @@
-import { Container } from "@/components/container";
-import { cn } from "@/lib/utils";
-import { Exo_2 } from "next/font/google";
 import HeaderImage from "@public/assets/header-image.png";
 import HeaderImage2 from "@public/assets/header-image2.png";
+import { Exo_2 } from "next/font/google";
 import Image from "next/image";
+import { Container } from "@/components/container";
+import { cn } from "@/lib/utils";
 
 const exo2 = Exo_2({
 	subsets: ["cyrillic", "latin"],

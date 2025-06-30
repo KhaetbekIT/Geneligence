@@ -1,7 +1,8 @@
 import type { PageType } from "@/types/type";
-import { Headers } from "./_components/header";
-import { Works } from "./_components/works";
 import { Experience } from "./_components/experience";
+import { Headers } from "./_components/header";
+import { Services } from "./_components/services";
+import { Works } from "./_components/works";
 
 const Page: PageType = async () => {
 	return (
@@ -11,6 +12,8 @@ const Page: PageType = async () => {
 			<Works />
 
 			<Experience />
+
+			<Services />
 		</>
 	);
 };

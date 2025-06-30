@@ -1,0 +1,111 @@
+import ServiceImage from "@public/assets/service-image.png";
+import { ArrowUpRight } from "lucide-react";
+import { Exo_2 } from "next/font/google";
+import Image from "next/image";
+import Link from "next/link";
+import { Container } from "@/components/container";
+import { Routers } from "@/configs/routers.config";
+import { cn } from "@/lib/utils";
+
+const exo2 = Exo_2({
+	subsets: ["cyrillic", "latin"],
+	weight: ["600", "700", "400"],
+});
+
+export const Services = () => {
+	return (
+		<section className="pt-[136px]">
+			<Container>
+				<div className="space-y-10">
+					<h2
+						className={cn("uppercase text-4xl font-semibold", exo2.className)}
+					>
+						Услуги
+					</h2>
+
+					<div className="flex gap-6">
+						<div className="w-[416px] space-y-2">
+							<div className="bg-white rounded-3xl shadow-xl p-6 flex justify-between gap-4">
+								<div className="space-y-3">
+									<p className="text-[#898989] uppercase text-sm font-bold text-xl">
+										верстка
+									</p>
+
+									<p className="uppercase text-[28px] font-bold text-xl">
+										ОТ 5.000₽
+									</p>
+								</div>
+
+								<div>
+									<Link
+										href={Routers.socials.telegram}
+										target="_blank"
+										className="bg-[#C3FF3D] inline-block p-4 rounded-full hover:bg-[#C3FF3D]/70"
+									>
+										<ArrowUpRight />
+									</Link>
+								</div>
+							</div>
+
+							<div className="bg-white rounded-3xl shadow-xl p-6 flex justify-between gap-4">
+								<div className="space-y-3">
+									<p className="text-[#898989] uppercase text-sm font-bold text-xl">
+										РАЗРАБОТКА САЙТОВ
+									</p>
+
+									<p className="uppercase text-[28px] font-bold text-xl">
+										ОТ 20.000₽
+									</p>
+								</div>
+
+								<div>
+									<Link
+										href={Routers.socials.telegram}
+										target="_blank"
+										className="bg-[#C3FF3D] inline-block p-4 rounded-full hover:bg-[#C3FF3D]/70"
+									>
+										<ArrowUpRight />
+									</Link>
+								</div>
+							</div>
+
+							<div className="bg-white rounded-3xl shadow-xl p-6 flex justify-between gap-4">
+								<div className="space-y-3">
+									<p className="text-[#898989] uppercase text-sm font-bold text-xl">
+										под ключ
+									</p>
+
+									<p className="uppercase text-[28px] font-bold text-xl">
+										ОТ 50.000₽
+									</p>
+								</div>
+
+								<div>
+									<Link
+										href={Routers.socials.telegram}
+										target="_blank"
+										className="bg-[#C3FF3D] inline-block p-4 rounded-full hover:bg-[#C3FF3D]/70"
+									>
+										<ArrowUpRight />
+									</Link>
+								</div>
+							</div>
+						</div>
+
+						<div className="rounded-2xl relative grow bg-white py-8 pl-8 pr-[85px] shadow-xl overflow-hidden">
+							<h4
+								className={cn(
+									"text-4xl font-bold text-[№11141D]",
+									exo2.className,
+								)}
+							>
+								МЫ ГАРАНТИРУЕМ <span className="text-[#C3FF3D]">СКИДКУ</span>{" "}
+								НА ПОВТОРНЫЙ ЗАКАЗ
+							</h4>
+						</div>
+					</div>
+				</div>
+			</Container>
+		</section>
+	);
+};

@@ -1,13 +1,13 @@
-import { Container } from "@/components/container";
-import Image from "next/image";
 import DeltaSolar from "@public/assets/delta-solar.png";
-import Link from "next/link";
-import { Routers } from "@/configs/routers.config";
-import { ArrowUpRight } from "lucide-react";
-import Elite from "@public/assets/elite.png";
 import Dikom from "@public/assets/dikom.jpg";
 import Doirastan from "@public/assets/doirastan.png";
+import Elite from "@public/assets/elite.png";
 import OnlineShopping from "@public/assets/online-shopping.png";
+import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { Container } from "@/components/container";
+import { Routers } from "@/configs/routers.config";
 export const Works = () => {
 	return (
 		<section className="pt-[136px]">
@@ -59,7 +59,7 @@ export const Works = () => {
 
 							<div className="absolute right-8 bottom-8">
 								<Link
-									href={Routers.works.deltaSolar}
+									href={Routers.works.elite}
 									target="_blank"
 									className="bg-[#C3FF3D] inline-block p-4 rounded-full hover:bg-[#C3FF3D]/70"
 								>
@@ -116,7 +116,7 @@ export const Works = () => {
 
 								<div className="absolute right-8 bottom-8">
 									<Link
-										href={Routers.works.doirastan}
+										href={Routers.works.onlineShopping}
 										target="_blank"
 										className="bg-[#C3FF3D] inline-block p-4 rounded-full hover:bg-[#C3FF3D]/70"
 									>
