@@ -27,7 +27,7 @@ export const Services = () => {
 						<div className="w-[416px] space-y-2">
 							<div className="bg-white rounded-3xl shadow-xl p-6 flex justify-between gap-4">
 								<div className="space-y-3">
-									<p className="text-[#898989] uppercase text-sm font-bold text-xl">
+									<p className="text-[#898989] uppercase font-bold text-xl">
 										верстка
 									</p>
 
@@ -49,7 +49,7 @@ export const Services = () => {
 
 							<div className="bg-white rounded-3xl shadow-xl p-6 flex justify-between gap-4">
 								<div className="space-y-3">
-									<p className="text-[#898989] uppercase text-sm font-bold text-xl">
+									<p className="text-[#898989] uppercase font-bold text-xl">
 										РАЗРАБОТКА САЙТОВ
 									</p>
 
@@ -71,7 +71,7 @@ export const Services = () => {
 
 							<div className="bg-white rounded-3xl shadow-xl p-6 flex justify-between gap-4">
 								<div className="space-y-3">
-									<p className="text-[#898989] uppercase text-sm font-bold text-xl">
+									<p className="text-[#898989] uppercase font-bold text-xl">
 										под ключ
 									</p>
 
@@ -95,13 +95,33 @@ export const Services = () => {
 						<div className="rounded-2xl relative grow bg-white py-8 pl-8 pr-[85px] shadow-xl overflow-hidden">
 							<h4
 								className={cn(
-									"text-4xl font-bold text-[№11141D]",
+									"text-4xl font-bold text-[#11141D] relative z-10",
 									exo2.className,
 								)}
 							>
 								МЫ ГАРАНТИРУЕМ <span className="text-[#C3FF3D]">СКИДКУ</span>{" "}
-								НА ПОВТОРНЫЙ ЗАКАЗ
+								<br />
+								НА ПОВТОРНЫЙ ЗАКАЗ
 							</h4>
+
+							<div className="absolute top-0 right-0 bottom-0 w-[400px] h-[400px]">
+								<Image
+									priority
+									className="object-cover w-full h-full"
+									src={ServiceImage}
+									alt="service image"
+									width={400}
+									height={400}
+								/>
+							</div>
+
+							<Link
+								href={Routers.socials.telegram}
+								target="_blank"
+								className="inline-flex gap-2.5 text-[#696969] rounded-[40px] hover:text-[#696969]/70 absolute bottom-8 left-8"
+							>
+								АКЦИЯ <ArrowUpRight />
+							</Link>
 						</div>
 					</div>
 				</div>

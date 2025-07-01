@@ -26,6 +26,16 @@ const nextConfig: NextConfig = {
 			},
 		];
 	},
+	experimental: {
+		optimizePackageImports: [
+			"@radix-ui/react-accordion",
+			"@radix-ui/react-dialog",
+			"@radix-ui/react-slot",
+			"class-variance-authority",
+			"lucide-react",
+			"embla-carousel-react",
+		]
+	}
 };
 
 export default nextConfig;

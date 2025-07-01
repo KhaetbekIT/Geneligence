@@ -26,9 +26,16 @@ export const Nav = ({ className, ...props }: ComponentProps<"nav">) => {
 				<div className="flex rounded-[20px] w-max mx-auto bg-[#696969]/70 p-3 gap-4 items-center">
 					<Link
 						href={Routers.pages.home}
-						className="w-[50] h-[50] rounded-full overflow-hidden"
+						className="w-[50] h-[50] rounded-full overflow-hidden block"
 					>
-						<Image src={LogoImage} alt="logo" width={50} height={50} priority />
+						<Image
+							className="w-full h-full object-cover block"
+							src={LogoImage}
+							alt="logo"
+							width={640}
+							height={640}
+							priority
+						/>
 					</Link>
 
 					<div className="flex gap-1 items-center">

@@ -16,5 +16,7 @@ export const Routers = {
 	},
 	socials: {
 		telegram: "https://t.me/bek_worker",
+		insta: "https://www.instagram.com/geneligence/",
+		youtube: "https://www.youtube.com/@geneligence",
 	},
 } as const;
