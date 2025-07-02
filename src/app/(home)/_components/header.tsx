@@ -13,11 +13,11 @@ export const Headers = () => {
 	return (
 		<header className={cn(exo2.className)}>
 			<Container>
-				<div className="space-y-[56px]">
+				<div className="space-y-4 sm:space-y-[56px]">
 					<div className="max-w-[1127px] w-full">
-						<h1 className={"uppercase text-[80px] font-semibold"}>
+						<h1 className={"uppercase text-[clamp(30px,5vw,80px)] font-semibold"}>
 							РАЗРАБОТКА ВЕБ <br /> САЙТОВ{" "}
-							<div className="inline-block relative">
+							<div className="inline-block relative w-[clamp(140px,4vw,250px]">
 								<Image
 									priority
 									className="object-contain block w-full h-full"
@@ -30,8 +30,8 @@ export const Headers = () => {
 						</h1>
 					</div>
 
-					<div className="flex items-center gap-[64px]">
-						<div className="w-[445px] h-[168px] overflow-hidden">
+					<div className="flex items-center gap-[clamp(24px,3vw,64px)] flex-col sm:flex-row">
+						<div className="max-w-[445px] w-full h-[110px] sm:h-[168px] overflow-hidden">
 							<Image
 								priority
 								className="object-contain block w-full h-full"
@@ -42,23 +42,23 @@ export const Headers = () => {
 							/>
 						</div>
 
-						<div className="grow flex justify-between">
-							<div className="w-[217px] border-r space-y-1 pr-[56px]">
-								<h4 className="text-[40px]">250+</h4>
+						<div className="grow grid grid-cols-3 max-w-[670px] w-full">
+							<div className="border-r space-y-1 pr-[clamp(12px,3vw,56px)]">
+								<h4 className="text-[clamp(22px,5vw,40px)]">250+</h4>
 
-								<p className="text-lg text-[#696969]">Выполненных проектов</p>
+								<p className="text-[clamp(12px,3vw,18px)] text-[#696969]">Выполненных проектов</p>
 							</div>
 
-							<div className="w-[217px] border-r space-y-1 px-[56px]">
-								<h4 className="text-[40px]">23+</h4>
+							<div className=" border-r space-y-1 px-[clamp(12px,3vw,56px)]">
+								<h4 className="text-[clamp(22px,5vw,40px)]">23+</h4>
 
-								<p className="text-lg text-[#696969]">Постоянных клиента</p>
+								<p className="text-[clamp(12px,3vw,18px)] text-[#696969]">Постоянных клиента</p>
 							</div>
 
-							<div className="w-[217px] space-y-1 pl-[56px]">
-								<h4 className="text-[40px]">3</h4>
+							<div className=" space-y-1 pl-[clamp(12px,3vw,56px)]">
+								<h4 className="text-[clamp(22px,5vw,40px)]">3</h4>
 
-								<p className="text-lg text-[#696969]">
+								<p className="text-[clamp(12px,3vw,18px)] text-[#696969]">
 									Года работы в дружной команде
 								</p>
 							</div>
