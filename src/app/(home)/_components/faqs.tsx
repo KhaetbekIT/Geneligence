@@ -1,12 +1,12 @@
-import { Container } from "@/components/container";
-import { cn } from "@/lib/utils";
 import { Exo_2 } from "next/font/google";
+import { Container } from "@/components/container";
 import {
 	Accordion,
 	AccordionContent,
 	AccordionItem,
 	AccordionTrigger,
 } from "@/components/ui/accordion";
+import { cn } from "@/lib/utils";
 
 const exo2 = Exo_2({
 	subsets: ["cyrillic", "latin"],
@@ -53,7 +53,7 @@ export const Faqs = () => {
 					<Accordion type="single" collapsible className="space-y-4">
 						{faqItems.map((item, index) => (
 							<AccordionItem
-								key={index}
+								key={item.question}
 								value={`item-${index}`}
 								className="rounded-3xl border border-[#E4E4E4] p-6 data-[state=open]:bg-[#F8F8F8] transition-colors"
 							>
