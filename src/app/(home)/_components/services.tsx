@@ -14,7 +14,7 @@ const exo2 = Exo_2({
 
 export const Services = () => {
 	return (
-		<section className="pt-[136px]">
+		<section className="pt-[clamp(76px,10vw,136px)]">
 			<Container>
 				<div className="space-y-10">
 					<h2
@@ -23,8 +23,8 @@ export const Services = () => {
 						Услуги
 					</h2>
 
-					<div className="flex gap-6">
-						<div className="w-[416px] space-y-2">
+					<div className="flex gap-6 flex-col md:flex-row">
+						<div className="md:max-w-[416px] w-full space-y-2">
 							<div className="bg-white rounded-3xl shadow-xl p-6 flex justify-between gap-4">
 								<div className="space-y-3">
 									<p className="text-[#898989] uppercase font-bold text-xl">
@@ -92,10 +92,10 @@ export const Services = () => {
 							</div>
 						</div>
 
-						<div className="rounded-2xl relative grow bg-white py-8 pl-8 pr-[85px] shadow-xl overflow-hidden">
+						<div className="rounded-2xl relative grow bg-white p-6 md:py-8 md:pl-8 md:pr-[85px] shadow-xl overflow-hidden w-full h-[330px] md:h-auto">
 							<h4
 								className={cn(
-									"text-4xl font-bold text-[#11141D] relative z-10",
+									"text-[clamp(24px,3vw,36px)] font-bold text-[#11141D] relative z-10",
 									exo2.className,
 								)}
 							>
@@ -104,7 +104,7 @@ export const Services = () => {
 								НА ПОВТОРНЫЙ ЗАКАЗ
 							</h4>
 
-							<div className="absolute top-0 right-0 bottom-0 w-[400px] h-[400px]">
+							<div className="absolute top-0 right-0 bottom-0 w-[210px] h-[250px] md:w-[400px] md:h-[400px]">
 								<Image
 									priority
 									className="object-cover w-full h-full"
