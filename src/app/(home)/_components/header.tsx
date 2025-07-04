@@ -1,9 +1,9 @@
-import HeaderImage from "@public/assets/header-image.png";
 import HeaderImage2 from "@public/assets/header-image2.png";
 import { Exo_2 } from "next/font/google";
 import Image from "next/image";
 import { Container } from "@/components/container";
 import { cn } from "@/lib/utils";
+import { HeaderTitle } from "./header-title";
 
 const exo2 = Exo_2({
 	subsets: ["cyrillic", "latin"],
@@ -14,21 +14,12 @@ export const Headers = () => {
 		<header className={cn(exo2.className)}>
 			<Container>
 				<div className="space-y-4 sm:space-y-[56px]">
-					<div className="max-w-[1127px] w-full">
-						<h1 className={"uppercase text-[clamp(30px,5vw,80px)] font-semibold"}>
-							РАЗРАБОТКА ВЕБ <br /> САЙТОВ{" "}
-							<div className="inline-block relative w-[clamp(140px,4vw,250px]">
-								<Image
-									priority
-									className="object-contain block w-full h-full"
-									src={HeaderImage}
-									alt="header image"
-									width={287}
-									height={76}
-								/>
-							</div>
-						</h1>
-					</div>
+					<HeaderTitle
+						titles={[
+							"Из идей — в интерфейсы. Из макетов — в результат",
+							"Веб-разработка, где каждая деталь имеет значение",
+						]}
+					/>
 
 					<div className="flex items-center gap-[clamp(24px,3vw,64px)] flex-col sm:flex-row">
 						<div className="max-w-[445px] w-full h-[110px] sm:h-[168px] overflow-hidden">
@@ -46,13 +37,17 @@ export const Headers = () => {
 							<div className="border-r space-y-1 pr-[clamp(12px,3vw,56px)]">
 								<h4 className="text-[clamp(22px,5vw,40px)]">250+</h4>
 
-								<p className="text-[clamp(12px,3vw,18px)] text-[#696969]">Выполненных проектов</p>
+								<p className="text-[clamp(12px,3vw,18px)] text-[#696969]">
+									Выполненных проектов
+								</p>
 							</div>
 
 							<div className=" border-r space-y-1 px-[clamp(12px,3vw,56px)]">
 								<h4 className="text-[clamp(22px,5vw,40px)]">23+</h4>
 
-								<p className="text-[clamp(12px,3vw,18px)] text-[#696969]">Постоянных клиента</p>
+								<p className="text-[clamp(12px,3vw,18px)] text-[#696969]">
+									Постоянных клиента
+								</p>
 							</div>
 
 							<div className=" space-y-1 pl-[clamp(12px,3vw,56px)]">
