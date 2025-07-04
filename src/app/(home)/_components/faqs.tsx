@@ -60,7 +60,7 @@ export const Faqs = () => {
 								<AccordionTrigger className="text-xl font-semibold text-[#11141D] hover:no-underline text-left">
 									{item.question}
 								</AccordionTrigger>
-								<AccordionContent className="text-[#4A4A4A] pt-2 whitespace-pre-line">
+								<AccordionContent className="text-[#4A4A4A] whitespace-pre-line">
 									{item.answer}
 								</AccordionContent>
 							</AccordionItem>

@@ -32,7 +32,7 @@ export const Nav = ({ className, ...props }: ComponentProps<"nav">) => {
 		return () => {
 			window.removeEventListener("resize", handleResize);
 		};
-	}, [])
+	}, []);
 
 	return (
 		<nav className={cn("py-6 sm:py-10 relative", className)} {...props}>
