@@ -36,7 +36,9 @@ export const WorksItem = ({
 
 			<div className="absolute bg-black/70 top-full left-0 right-0 -bottom-full group-hover:top-0 group-hover:bottom-0 transition-all duration-300 ease-in-out">
 				<div className="absolute top-8 left-8 right-8 text-white">
-					<h3 className="text-4xl font-semibold uppercase">{title}</h3>
+					<h3 className="text-[clamp(20px,4vw,36px)] font-semibold uppercase">
+						{title}
+					</h3>
 				</div>
 
 				<div className="absolute right-8 bottom-8">

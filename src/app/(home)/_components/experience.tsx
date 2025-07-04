@@ -21,22 +21,25 @@ const exo2 = Exo_2({
 
 export const Experience = () => {
 	return (
-		<section className={cn("pt-[136px]", exo2.className)}>
+		<section className={cn("pt-[clamp(76px,10vw,136px)]", exo2.className)}>
 			<Container>
-				<div className="bg-white rounded-2xl shadow-xl p-8 space-y-1">
-					<div className="flex justify-between">
-						<h2 className="uppercase text-4xl font-semibold">Опыт работы</h2>
+				<div className="bg-white rounded-2xl shadow-xl p-5 xl:p-8 space-y-[clamp(24px,3vw,56px)]">
+					<div className="flex justify-between items-center">
+						<h2 className="uppercase text-[clamp(24px,3vw,36px)] font-semibold">
+							Опыт работы
+						</h2>
 
 						<Link
 							href={Routers.socials.telegram}
 							target="_blank"
 							className="inline-flex gap-2.5 text-[#C3FF3D] bg-[#11141D] rounded-[40px] px-4 py-3 hover:text-[#C3FF3D]/70"
 						>
-							Обсудить проект <ArrowUpRight />
+							<span className="hidden md:inline-block">Обсудить проект</span>{" "}
+							<ArrowUpRight />
 						</Link>
 					</div>
 
-					<p className="text-lg text-[#4a4a4a]">
+					<p className="text-[clamp(14px,2vw,18px)] text-[#4a4a4a] text-justify">
 						Я работаю в сфере веб-разработки с 2021 года. За это время я успел
 						поработать над множеством проектов, от небольших сайтов-визиток до
 						крупных корпоративных порталов. Мой опыт охватывает фронтенд
@@ -50,36 +53,42 @@ export const Experience = () => {
 							loop: true,
 						}}
 					>
-						<CarouselContent className="justify-center">
-							<CarouselItem className="basis-1/5">
-								<Image
-									src={MeijiMedia}
-									alt="meiji media"
-									className="object-contain"
-									width={150}
-									height={150}
-									priority
-								/>
+						<CarouselContent className="md:justify-center">
+							<CarouselItem className="sm:basis-2/5 md:basis-1/5">
+								<div className="w-[150px] mx-auto">
+									<Image
+										src={MeijiMedia}
+										alt="meiji media"
+										className="object-cover"
+										width={150}
+										height={150}
+										priority
+									/>
+								</div>
 							</CarouselItem>
-							<CarouselItem className="basis-1/5">
-								<Image
-									src={Academy}
-									alt="it academy"
-									className="object-contain"
-									width={150}
-									height={150}
-									priority
-								/>
+							<CarouselItem className="sm:basis-2/5 md:basis-1/5">
+								<div className="w-[150px] mx-auto">
+									<Image
+										src={Academy}
+										alt="it academy"
+										className="object-cover"
+										width={150}
+										height={150}
+										priority
+									/>
+								</div>
 							</CarouselItem>
-							<CarouselItem className="basis-1/5">
-								<Image
-									className="object-contain"
-									width={150}
-									height={150}
-									priority
-									src={MCRM}
-									alt="mcrm"
-								/>
+							<CarouselItem className="sm:basis-2/5 md:basis-1/5">
+								<div className="w-[150px] mx-auto">
+									<Image
+										className="object-cover"
+										width={150}
+										height={150}
+										priority
+										src={MCRM}
+										alt="mcrm"
+									/>
+								</div>
 							</CarouselItem>
 						</CarouselContent>
 					</Carousel>

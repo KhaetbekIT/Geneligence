@@ -12,7 +12,7 @@ const HomeLayout: LayoutType = async ({ children }) => {
 		<body className="flex min-h-screen flex-col justify-between">
 			<Nav className="shrink-0" />
 
-			<main className="grow sm:pt-8 sm:pb-32">{children}</main>
+			<main className="grow py-5 sm:pt-8 sm:pb-32">{children}</main>
 
 			<Footer className="shrink-0" />
 		</body>

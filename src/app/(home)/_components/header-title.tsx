@@ -53,7 +53,7 @@ export const HeaderTitle = ({ titles, delay = 7000 }: Props) => {
 
 	return (
 		<h1
-			className="uppercase text-[clamp(30px,5vw,75px)] font-semibold min-h-[230px]"
+			className="uppercase text-[clamp(30px,5vw,75px)] font-semibold min-h-[200px]"
 			ref={root}
 		>
 			{showText && splitText(titles[index] || "")}
