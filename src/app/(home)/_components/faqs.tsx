@@ -43,7 +43,7 @@ export const Faqs = () => {
 				<div className="space-y-10">
 					<h2
 						className={cn(
-							"uppercase text-4xl font-semibold text-center",
+							"uppercase text-[clamp(24px,3vw,36px)] font-semibold",
 							exo2.className,
 						)}
 					>
@@ -55,7 +55,7 @@ export const Faqs = () => {
 							<AccordionItem
 								key={item.question}
 								value={`item-${index}`}
-								className="rounded-3xl border border-[#E4E4E4] p-6 data-[state=open]:bg-[#F8F8F8] transition-colors"
+								className="rounded-3xl border border-[#E4E4E4] px-5 py-4 md:p-6 data-[state=open]:bg-[#F8F8F8] transition-colors"
 							>
 								<AccordionTrigger className="text-xl font-semibold text-[#11141D] hover:no-underline text-left">
 									{item.question}
