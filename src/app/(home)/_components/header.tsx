@@ -35,7 +35,7 @@ export const Headers = () => {
 
 						<div className="grow grid grid-cols-3 max-w-[670px] w-full">
 							<div className="border-r space-y-1 pr-[clamp(12px,3vw,56px)]">
-								<h4 className="text-[clamp(22px,3vw,40px)]">250+</h4>
+								<h4 className="text-[clamp(22px,3vw,40px)]">15+</h4>
 
 								<p className="text-[clamp(12px,2vw,18px)] text-[#696969]">
 									Выполненных проектов
@@ -43,7 +43,7 @@ export const Headers = () => {
 							</div>
 
 							<div className=" border-r space-y-1 px-[clamp(12px,3vw,56px)]">
-								<h4 className="text-[clamp(22px,3vw,40px)]">23+</h4>
+								<h4 className="text-[clamp(22px,3vw,40px)]">5+</h4>
 
 								<p className="text-[clamp(12px,2vw,18px)] text-[#696969]">
 									Постоянных клиента

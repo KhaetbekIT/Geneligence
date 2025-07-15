@@ -1,11 +1,11 @@
-import { Container } from "@/components/container";
-import Image from "next/image";
 import Logo from "@public/logo.jpg";
-import Link from "next/link";
-import { Routers } from "@/configs/routers.config";
-import type { ComponentProps } from "react";
-import { cn } from "@/lib/utils";
 import { Instagram, Send, Youtube } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import type { ComponentProps } from "react";
+import { Container } from "@/components/container";
+import { Routers } from "@/configs/routers.config";
+import { cn } from "@/lib/utils";
 
 export const Footer = ({ className, ...props }: ComponentProps<"footer">) => {
 	return (
@@ -28,12 +28,10 @@ export const Footer = ({ className, ...props }: ComponentProps<"footer">) => {
 						</Link>
 
 						<p className="text-[#B8B8B8] text-sm mb-2">
-							&copy; 2023 - {new Date().getFullYear()} Все права защищены
+							&copy; 2024 - {new Date().getFullYear()} Все права защищены
 						</p>
 
-						<p className="text-white text-sm mb-6">
-							Выполнено Khaetbek и Geneligence
-						</p>
+						<p className="text-white text-sm mb-6">Выполнено Geneligence</p>
 
 						<div className="flex gap-2.5 justify-between">
 							<Link

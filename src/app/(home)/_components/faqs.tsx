@@ -38,7 +38,7 @@ const faqItems = [
 
 export const Faqs = () => {
 	return (
-		<section className="pt-[136px]">
+		<section className="pt-[clamp(76px,10vw,136px)]">
 			<Container>
 				<div className="space-y-10">
 					<h2
