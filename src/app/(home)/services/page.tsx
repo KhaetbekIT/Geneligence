@@ -6,7 +6,7 @@ import { HTMLDesign } from "./_components/html-design";
 const Page: PageType = () => {
 	return (
 		<>
-			<section className="pt-[clamp(76px,10vw,136px)]">
+			<section>
 				<Container>
 					<div className="space-y-6">
 						<HTMLDesign />
