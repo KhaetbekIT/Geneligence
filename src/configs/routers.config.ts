@@ -19,4 +19,7 @@ export const Routers = {
 		insta: "https://www.instagram.com/geneligence/",
 		youtube: "https://www.youtube.com/@geneligence",
 	},
+	linksTarget: {
+		geneligence: "https://geneligence.vercel.app/",
+	},
 } as const;

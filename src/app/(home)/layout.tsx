@@ -1,3 +1,4 @@
+import { Routers } from "@/configs/routers.config";
 import { Footer } from "@/layouts/footer/footer";
 import { Nav } from "@/layouts/header/nav";
 import type { LayoutType } from "@/types/type";
@@ -18,7 +19,7 @@ export const metadata = {
 		title: "Geneligence — Веб-разработка и дизайн",
 		description:
 			"Профессиональное создание сайтов и приложений. Посмотрите наши работы.",
-		url: "https://geneligence.vercel.app/",
+		url: Routers.linksTarget.geneligence,
 		siteName: "Geneligence",
 		images: [
 			{
@@ -38,7 +39,7 @@ export const metadata = {
 		images: ["/og-image.jpg"],
 	},
 	alternates: {
-		canonical: "https://geneligence.vercel.app/",
+		canonical: Routers.linksTarget.geneligence,
 	},
 };
 

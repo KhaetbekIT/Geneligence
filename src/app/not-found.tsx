@@ -1,5 +1,7 @@
 import { AlertOctagon } from "lucide-react";
 import Link from "next/link";
+import { Footer } from "@/layouts/footer/footer";
+import { Nav } from "@/layouts/header/nav";
 
 export default function NotFound() {
 	return (
@@ -7,8 +9,10 @@ export default function NotFound() {
 			<head>
 				<title>404 - Page Not Found</title>
 			</head>
-			<body className="from-background to-muted/30 flex min-h-screen items-center justify-center bg-linear-to-b p-4">
-				<main className="mx-auto w-full max-w-3xl space-y-8 text-center">
+			<body className="from-background to-muted/30 min-h-screen  bg-linear-to-b flex flex-col justify-between">
+				<Nav className="shrink-0" />
+
+				<main className="mx-auto w-full max-w-3xl space-y-8 text-center p-4">
 					<div className="animate-bounce">
 						<AlertOctagon className="text-destructive/60 mx-auto h-24 w-24" />
 					</div>
@@ -31,6 +35,8 @@ export default function NotFound() {
 						Вернуться на главную
 					</Link>
 				</main>
+
+				<Footer className="shrink-0" />
 			</body>
 		</>
 	);
