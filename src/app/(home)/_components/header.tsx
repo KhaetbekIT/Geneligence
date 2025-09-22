@@ -9,9 +9,18 @@ const exo2 = Exo_2({
 	subsets: ["cyrillic", "latin"],
 	weight: ["600", "700"],
 });
-export const Headers = () => {
+
+// 1. Данные для статистики вынесены в массив для чистоты кода
+const statsData = [
+	{ value: "15+", label: "Выполненных проектов" },
+	{ value: "5+", label: "Постоянных клиента" },
+	{ value: "3", label: "Года работы в дружной команде" },
+];
+
+// Компонент переименован в единственное число для соответствия стандартам
+export const Header = () => {
 	return (
-		<header className={cn(exo2.className)}>
+		<header className={cn("py-10", exo2.className)}>
 			<Container>
 				<div className="space-y-[clamp(16px,3vw,56px)]">
 					<HeaderTitle
@@ -21,42 +30,34 @@ export const Headers = () => {
 						]}
 					/>
 
+					{/* 2. Основной блок сделан адаптивным (flex-col -> md:flex-row) */}
 					<div className="flex items-center gap-[clamp(24px,3vw,64px)] flex-col md:flex-row">
-						<div className="max-w-[445px] w-full h-[210px] sm:h-[168px] overflow-hidden rounded-2xl">
+						<div className="w-full max-w-[445px] shrink-0 overflow-hidden rounded-2xl aspect-[445/168]">
 							<Image
 								priority
 								className="object-cover block w-full h-full"
 								src={HeaderImage2}
-								alt="header image 2"
+								alt="Абстрактное изображение технологичного интерфейса"
 								width={445}
 								height={168}
 							/>
 						</div>
 
-						<div className="grow grid grid-cols-3 max-w-[670px] w-full">
-							<div className="border-r space-y-1 pr-[clamp(12px,3vw,56px)]">
-								<h4 className="text-[clamp(22px,3vw,40px)]">15+</h4>
-
-								<p className="text-[clamp(12px,2vw,18px)] text-[#696969]">
-									Выполненных проектов
-								</p>
-							</div>
-
-							<div className=" border-r space-y-1 px-[clamp(12px,3vw,56px)]">
-								<h4 className="text-[clamp(22px,3vw,40px)]">5+</h4>
-
-								<p className="text-[clamp(12px,2vw,18px)] text-[#696969]">
-									Постоянных клиента
-								</p>
-							</div>
-
-							<div className=" space-y-1 pl-[clamp(12px,3vw,56px)]">
-								<h4 className="text-[clamp(22px,3vw,40px)]">3</h4>
-
-								<p className="text-[clamp(12px,2vw,18px)] text-[#696969]">
-									Года работы в дружной команде
-								</p>
-							</div>
+						{/* 3. Сетка статистики сделана адаптивной и рендерится из массива */}
+						<div className="grid w-full max-w-[670px] grid-cols-1 gap-8 text-center sm:grid-cols-3 sm:text-left sm:gap-0 sm:divide-x sm:divide-gray-200">
+							{statsData.map((stat, index) => (
+								<div
+									key={index.toString()}
+									className="space-y-1 sm:px-[clamp(12px,3vw,56px)]"
+								>
+									<h4 className="font-bold text-[clamp(28px,3vw,40px)]">
+										{stat.value}
+									</h4>
+									<p className="text-[clamp(14px,2vw,18px)] text-[#696969]">
+										{stat.label}
+									</p>
+								</div>
+							))}
 						</div>
 					</div>
 				</div>

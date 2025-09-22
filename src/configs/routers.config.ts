@@ -21,5 +21,6 @@ export const Routers = {
 	},
 	linksTarget: {
 		geneligence: "https://geneligence.vercel.app/",
+		email: "geneligence@mail.ru",
 	},
 } as const;

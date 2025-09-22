@@ -1,7 +1,6 @@
 import { Container } from "@/components/container";
 import type { PageType } from "@/types/type";
-import { Development } from "./_components/development";
-import { HTMLDesign } from "./_components/html-design";
+import { ServicesGrid } from "./_components/service-card";
 
 const Page: PageType = () => {
 	return (
@@ -9,9 +8,7 @@ const Page: PageType = () => {
 			<section>
 				<Container>
 					<div className="space-y-6">
-						<HTMLDesign />
-
-						<Development />
+						<ServicesGrid />
 					</div>
 				</Container>
 			</section>

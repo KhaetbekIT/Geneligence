@@ -6,6 +6,13 @@ import Link from "next/link";
 import type { ComponentProps } from "react";
 import { cn } from "@/lib/utils";
 
+interface Props extends ComponentProps<"div"> {
+	title: string;
+	image: string | StaticImport;
+	href: Url;
+	imageClassName?: string;
+}
+
 export const WorksItem = ({
 	image,
 	className,
@@ -17,7 +24,8 @@ export const WorksItem = ({
 	return (
 		<div
 			className={cn(
-				"overflow-hidden rounded-2xl relative bg-gray-400 border border-gray-400 group",
+				// 3. Добавлен aspect-video для сохранения пропорций 16:9
+				"overflow-hidden max-h-[450px] h-full rounded-2xl relative bg-gray-400 border border-gray-400 group ",
 				className,
 			)}
 			{...props}
@@ -26,7 +34,7 @@ export const WorksItem = ({
 				src={image}
 				alt={title}
 				width={1600}
-				height={960}
+				height={900}
 				priority
 				className={cn(
 					"object-cover w-full h-full group-hover:scale-105 transition-transform duration-300 ease-in-out",
@@ -34,18 +42,18 @@ export const WorksItem = ({
 				)}
 			/>
 
-			<div className="absolute bg-black/70 top-full left-0 right-0 -bottom-full group-hover:top-0 group-hover:bottom-0 transition-all duration-300 ease-in-out">
-				<div className="absolute top-8 left-8 right-8 text-white">
-					<h3 className="text-[clamp(20px,4vw,36px)] font-semibold uppercase">
-						{title}
-					</h3>
-				</div>
+			<div className="absolute bg-black/70 top-full left-0 right-0 -bottom-full group-hover:top-0 group-hover:bottom-0 transition-all duration-300 ease-in-out p-6 sm:p-8">
+				<h3 className="text-white text-[clamp(20px,3vw,32px)] font-semibold uppercase">
+					{title}
+				</h3>
 
-				<div className="absolute right-8 bottom-8">
+				<div className="absolute right-6 bottom-6 sm:right-8 sm:bottom-8">
 					<Link
 						href={href}
 						target="_blank"
-						className="bg-[#C3FF3D] inline-block p-4 rounded-full hover:bg-[#C3FF3D]/70"
+						rel="noopener noreferrer"
+						className="bg-[#C3FF3D] text-black inline-block p-4 rounded-full hover:bg-opacity-80 transition-all duration-300 transform hover:scale-110"
+						aria-label={`Подробнее о проекте ${title}`}
 					>
 						<ArrowUpRight />
 					</Link>
@@ -54,10 +62,3 @@ export const WorksItem = ({
 		</div>
 	);
 };
-
-interface Props extends ComponentProps<"div"> {
-	title: string;
-	image: string | StaticImport;
-	href: Url;
-	imageClassName?: string;
-}

@@ -118,3 +118,16 @@
 		@apply bg-background text-foreground;
 	}
 }
+
+@keyframes infinite-scroll {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-100%);
+	}
+}
+
+.animate-infinite-scroll {
+	animation: infinite-scroll 40s linear infinite;
+}
