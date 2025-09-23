@@ -1,29 +1,38 @@
 {
 	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
 	"assist": {
-		"actions": { "source": { "recommended": true } },
+		"actions": {
+			"recommended": true,
+			"source": {
+				"recommended": true
+			}
+		},
 		"enabled": true
 	},
 	"formatter": {
 		"enabled": true,
-		"includes": ["**", "!**/.next", "!**/node_modules", "!**/messages"]
+		"includes": [
+			"src/**/*.{js,jsx,ts,tsx}"
+		]
 	},
 	"linter": {
 		"domains": {
+			"project": "recommended",
 			"next": "recommended",
 			"react": "all"
 		},
 		"enabled": true,
 		"includes": [
-			"**",
-			"!**/.next",
+			"src/**/*.{js,jsx,ts,tsx}",
+			"!src/app/\\[locale\\]/(app)/test",
 			"!**/node_modules",
-			"!src/app/\\[locale\\]/(app)/test"
+			"!**/.next"
 		],
 		"rules": {
 			"a11y": {
 				"noSvgWithoutTitle": "off",
-				"useKeyWithClickEvents": "off"
+				"useKeyWithClickEvents": "off",
+				"useSemanticElements": "warn"
 			},
 			"complexity": {
 				"noAdjacentSpacesInRegex": "error",
@@ -33,6 +42,7 @@
 				"noUselessTypeConstraint": "error"
 			},
 			"correctness": {
+				"useUniqueElementIds": "off",
 				"noChildrenProp": "error",
 				"noConstAssign": "error",
 				"noConstantCondition": "error",
@@ -64,14 +74,18 @@
 				"useYield": "error"
 			},
 			"nursery": {
-				"useUniqueElementIds": "off"
+				"recommended": true
 			},
 			"performance": {
+				"noBarrelFile": "error",
 				"recommended": true
 			},
 			"recommended": true,
-			"security": { "noDangerouslySetInnerHtml": "error" },
+			"security": {
+				"noDangerouslySetInnerHtml": "error"
+			},
 			"style": {
+				"recommended": true,
 				"noInferrableTypes": "error",
 				"noNamespace": "error",
 				"noParameterAssign": "error",
@@ -84,9 +98,11 @@
 				"useNumberNamespace": "error",
 				"useSelfClosingElements": "warn",
 				"useSingleVarDeclarator": "error",
-				"useTemplate": "error"
+				"useTemplate": "error",
+				"useShorthandFunctionType": "error"
 			},
 			"suspicious": {
+				"recommended": true,
 				"noAsyncPromiseExecutor": "error",
 				"noCatchAssign": "error",
 				"noClassAssign": "error",
@@ -123,5 +139,16 @@
 		"clientKind": "git",
 		"enabled": true,
 		"useIgnoreFile": true
+	},
+	"files": {
+		"experimentalScannerIgnores": [
+			"**/node_modules/**",
+			"**/.next/**"
+		],
+		"includes": [
+			"src/**/*.{js,jsx,ts,tsx}",
+			"!**/node_modules",
+			"!**/.next"
+		]
 	}
 }

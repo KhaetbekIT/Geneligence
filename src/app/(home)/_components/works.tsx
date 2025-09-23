@@ -1,10 +1,6 @@
-import DeltaSolar from "@public/assets/delta-solar.png";
-import Dikom from "@public/assets/dikom.jpg";
-import Doirastan from "@public/assets/doirastan.png";
-import Elite from "@public/assets/elite.png";
 import { Exo_2 } from "next/font/google";
 import { Container } from "@/components/container";
-import { Routers } from "@/configs/routers.config";
+import { projectsData } from "@/defaults/projects.data";
 import { WorksItem } from "./works-item";
 
 const exo2 = Exo_2({
@@ -12,35 +8,34 @@ const exo2 = Exo_2({
 	weight: ["600", "700"],
 });
 
-// --- 1. Данные о работах вынесены в массив для гибкости и масштабируемости ---
 const worksData = [
 	{
 		id: 1,
-		image: DeltaSolar,
-		title: 'Поправка таблицы карточки товара "Delta Solar"',
-		href: Routers.works.deltaSolar,
-		className: "md:col-span-2", // Эта работа будет занимать 2 колонки на средних экранах и больше
+		image: projectsData[0].imageUrl,
+		title: projectsData[0].title,
+		href: projectsData[0].link,
+		className: "md:col-span-2",
 	},
 	{
 		id: 2,
-		image: Elite,
-		title: 'Разработка сайта "Elite" с админкой',
-		href: Routers.works.elite,
-		className: "", // Стандартный размер
+		image: projectsData[1].imageUrl,
+		title: projectsData[1].title,
+		href: projectsData[1].link,
+		className: "",
 	},
 	{
 		id: 3,
-		image: Doirastan,
-		title: 'Разработка сайта продаж "Doirastan"',
-		href: Routers.works.doirastan,
-		className: "", // Стандартный размер
+		image: projectsData[2].imageUrl,
+		title: projectsData[2].title,
+		href: projectsData[2].link,
+		className: "",
 	},
 	{
 		id: 4,
-		image: Dikom,
-		title: 'Поправка сайта "Dikom"',
-		href: Routers.works.dikom,
-		className: "md:col-span-2", // Эта работа также будет занимать 2 колонки
+		image: projectsData[3].imageUrl,
+		title: projectsData[3].title,
+		href: projectsData[3].link,
+		className: "md:col-span-2",
 	},
 ];
 
@@ -55,7 +50,6 @@ export const Works = () => {
 						Портфолио
 					</h2>
 
-					{/* --- 2. Создана единая адаптивная сетка --- */}
 					<div className="grid grid-cols-1 md:grid-cols-3 gap-4">
 						{worksData.map((work) => (
 							<WorksItem

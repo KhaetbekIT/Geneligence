@@ -13,6 +13,7 @@ export const Routers = {
 		dikom: "https://dikom.ru/",
 		doirastan: "https://doirastan.uz/",
 		onlineShopping: "https://tech-store.sarob.uz/ru",
+		ipTelephoniya: "https://ip-telefoniya.uz/",
 	},
 	socials: {
 		telegram: "https://t.me/bek_worker",

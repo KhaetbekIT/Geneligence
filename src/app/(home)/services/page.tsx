@@ -1,6 +1,6 @@
 import { Container } from "@/components/container";
 import type { PageType } from "@/types/type";
-import { ServicesGrid } from "./_components/service-card";
+import { ServicesGrid } from "./_components/service-grid";
 
 const Page: PageType = () => {
 	return (

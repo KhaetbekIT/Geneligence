@@ -43,8 +43,7 @@ export const Header = () => {
 							/>
 						</div>
 
-						{/* 3. Сетка статистики сделана адаптивной и рендерится из массива */}
-						<div className="grid w-full max-w-[670px] grid-cols-1 gap-8 text-center sm:grid-cols-3 sm:text-left sm:gap-0 sm:divide-x sm:divide-gray-200">
+						<div className="grid w-full max-w-[670px] grid-cols-3 gap-8 text-center sm:text-left sm:gap-0 sm:divide-x sm:divide-gray-200">
 							{statsData.map((stat, index) => (
 								<div
 									key={index.toString()}
