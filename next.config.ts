@@ -2,9 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
 	reactStrictMode: true,
-	eslint: {
-		ignoreDuringBuilds: true,
-	},
+	// eslint: {
+	// 	ignoreDuringBuilds: true,
+	// },
 	logging: {
 		fetches: {
 			fullUrl: true,
